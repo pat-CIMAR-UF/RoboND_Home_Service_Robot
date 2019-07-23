@@ -1,6 +1,14 @@
 # RoboND_Home_Service_Robot
 
 #Install
+
+```bash
+$ cd catkin_ws/src
+$ catkin_init_workspace
+$ git clone --recursive https://github.com/pat-CIMAR-UF/RoboND_Home_Service_Robot.git
+$ cd catkin_ws
+$ catkin_make
+```
 Official ROS pkgs:
 ```bash
 git clone https://github.com/ros-perception/slam_gmapping.git
