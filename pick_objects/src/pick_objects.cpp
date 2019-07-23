@@ -32,27 +32,41 @@ int main(int argc, char** argv){
   goal.target_pose.pose.orientation.w = 1.0;
 
   // Send the goal position and orientation for the robot to reach
-  ROS_INFO("Sending goal");
+  ROS_INFO("Sending goal for pick up location");
   ac.sendGoal(goal);
 
   // Wait an infinite time for the results
   ac.waitForResult();
 
+  if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+    ROS_INFO("Hooray, robot went to pick up!");
+    ros::Duration(3.0).sleep();
+  }
+  else{
+    ROS_INFO("robot failed to move to pick up loaction");
+    ros::Duration(3.0).sleep();
+  }
+
+
   goal.target_pose.pose.position.x = 2.0;
   goal.target_pose.pose.position.y = -2.0;
   goal.target_pose.pose.orientation.w = 1.0;
 
-  ROS_INFO("Sending goal2");
+  ROS_INFO("Sending goal for drop off location");
   ac.sendGoal(goal);
 
   // Wait an infinite time for the results
   ac.waitForResult();
 
   // Check if the robot reached its goal
-  if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
-    ROS_INFO("Hooray, the base moved");
-  else
-    ROS_INFO("The base failed to move forward 1 meter for some reason");
+  if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+    ROS_INFO("Hooray, robot went to pick up location and drop off location!");
+    ros::Duration(5.0).sleep();
+  }
+  else{
+    ROS_INFO("robot failed to move to drop off loaction");
+    ros::Duration(5.0).sleep();
+  }
 
   return 0;
 }
