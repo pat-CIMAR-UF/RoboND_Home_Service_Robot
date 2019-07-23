@@ -3,6 +3,7 @@
 #Install
 
 ```bash
+$ pip install catkin_pkg
 $ cd catkin_ws/src
 $ catkin_init_workspace
 $ git clone --recursive https://github.com/pat-CIMAR-UF/RoboND_Home_Service_Robot.git
