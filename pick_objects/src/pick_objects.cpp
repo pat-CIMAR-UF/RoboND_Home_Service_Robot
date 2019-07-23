@@ -41,16 +41,16 @@ int main(int argc, char** argv){
   ac.waitForResult();
 
   if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
-    ROS_INFO("Hooray, robot went to pick up!");
-    ros::Duration(3.0).sleep();
+    ROS_INFO("Hooray, robot went to pick up location!");
+    ros::Duration(5.0).sleep();
   }
   else{
     ROS_INFO("robot failed to move to pick up loaction");
-    ros::Duration(3.0).sleep();
+    ros::Duration(5.0).sleep();
   }
 
   goal.target_pose.pose.orientation.z = -2.35;
-  ROS_INFO("Sending command to spin");
+  ROS_INFO("Sending command to rotate");
   ac.sendGoal(goal);
   ac.waitForResult();
   if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
@@ -75,7 +75,7 @@ int main(int argc, char** argv){
 
   // Check if the robot reached its goal
   if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
-    ROS_INFO("Hooray, robot went to pick up location and drop off location!");
+    ROS_INFO("Hooray, robot went drop off location!");
     ros::Duration(5.0).sleep();
   }
   else{
