@@ -9,9 +9,11 @@ int main(int argc, char** argv){
   // Initialize the simple_navigation_goals node
   ros::init(argc, argv, "pick_objects");
 
+  /*   
   ros::NodeHandle n;
 
   ros::Publisher goal_pub = n.advertise<geometry_msgs::Pose>("/target", 20);
+  */
 
   //tell the action client that we want to spin a thread by default
   MoveBaseClient ac("move_base", true);
@@ -44,6 +46,19 @@ int main(int argc, char** argv){
   }
   else{
     ROS_INFO("robot failed to move to pick up loaction");
+    ros::Duration(3.0).sleep();
+  }
+
+  goal.target_pose.pose.orientation.z = -2.35;
+  ROS_INFO("Sending command to spin");
+  ac.sendGoal(goal);
+  ac.waitForResult();
+  if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
+    ROS_INFO("Rotated");
+    ros::Duration(3.0).sleep();
+  }
+  else{
+    ROS_INFO("robot failed to rotate");
     ros::Duration(3.0).sleep();
   }
 
