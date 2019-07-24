@@ -8,7 +8,7 @@ This repository is tested and successfully built under Ubuntu 16.04 and ROS Kine
     <img src="image/demo2.gif" width="800px" alt=""/>
 </p>
 
-
+A better mp4 file could be downloaded [here](https://github.com/pat-CIMAR-UF/RoboND_Home_Service_Robot/blob/master/image/demo.mp4). It's smaller than this gif and clearer.
 # Install
 
 ```bash
