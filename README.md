@@ -60,10 +60,10 @@ $ ./home_service.sh
 
 **It is simple to solve:**
 
-+ Add a marker topic in rviz, leave the default "visualization_marker" topic as it is
-+ Save Config
-+ Close everything: rviz, gazebo, all the nodes initiated by the shell script
-+ relaunch the shell script `./home_service.sh`
++ **Add a marker topic in rviz, leave the default "visualization_marker" topic as it is**
++ **Save Config**
++ **Close everything: rviz, gazebo, all the nodes initiated by the shell script**
++ **relaunch the shell script `./home_service.sh`**
 
 # Result
 
