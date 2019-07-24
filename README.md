@@ -1,6 +1,6 @@
 # RoboND_Home_Service_Robot
 <p align="center">
-    <img src="image/demo2.gif" width="720px" alt=""/>
+    <img src="image/demo2.gif" width="800px" alt=""/>
 </p>
 
 # Install
