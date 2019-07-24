@@ -2,6 +2,7 @@
 <p align="center">
     <img src="image/demo.gif" width="720px" alt=""/>
 </p>
+
 # Install
 
 ```bash
