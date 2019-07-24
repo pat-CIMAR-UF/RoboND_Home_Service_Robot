@@ -1,5 +1,7 @@
 # RoboND_Home_Service_Robot
-
+<p align="center">
+    <img src="image/demo.gif" width="720px" alt=""/>
+</p>
 #Install
 
 ```bash
