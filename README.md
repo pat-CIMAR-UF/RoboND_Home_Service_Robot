@@ -2,7 +2,7 @@
 <p align="center">
     <img src="image/demo.gif" width="720px" alt=""/>
 </p>
-#Install
+# Install
 
 ```bash
 $ pip install catkin_pkg
@@ -14,6 +14,7 @@ $ git clone --recursive https://github.com/pat-CIMAR-UF/RoboND_Home_Service_Robo
 $ cd ..
 $ catkin_make
 ```
+
 Official ROS pkgs:
 ```bash
 git clone https://github.com/ros-perception/slam_gmapping.git
