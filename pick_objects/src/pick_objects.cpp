@@ -40,26 +40,19 @@ int main(int argc, char** argv){
   // Wait an infinite time for the results
   ac.waitForResult();
 
-  if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
-    ROS_INFO("Hooray, robot went to pick up location!");
-    ros::Duration(5.0).sleep();
-  }
-  else{
-    ROS_INFO("robot failed to move to pick up loaction");
-    ros::Duration(5.0).sleep();
-  }
+
 
   goal.target_pose.pose.orientation.z = -2.35;
   ROS_INFO("Sending command to rotate");
   ac.sendGoal(goal);
   ac.waitForResult();
   if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED){
-    ROS_INFO("Rotated");
-    ros::Duration(3.0).sleep();
+    ROS_INFO("Robot arrived pick up location and rotated!");
+    ros::Duration(5.0).sleep();
   }
   else{
-    ROS_INFO("robot failed to rotate");
-    ros::Duration(3.0).sleep();
+    ROS_INFO("Robot failed to go to pick up location and rotated");
+    ros::Duration(5.0).sleep();
   }
 
 
