@@ -12,6 +12,7 @@ A better mp4 file could be downloaded [here](https://github.com/pat-CIMAR-UF/Rob
 # Install
 
 ```bash
+$ sudo apt-get install ros-kinetic-turtlebot ros-kinetic-turtlebot-apps ros-kinetic-turtlebot-interactions ros-kinetic-turtlebot-simulator ros-kinetic-kobuki-ftdi ros-kinetic-ar-track-alvar-msgs
 $ pip install catkin_pkg
 $ pip install rospkg
 $ sudo apt-get install python-rospkg
