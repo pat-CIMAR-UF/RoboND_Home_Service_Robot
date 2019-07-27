@@ -3,10 +3,10 @@
 #include <nav_msgs/Odometry.h>
 #include <math.h>
 
-double pickX = 4.0;
+double pickX = 3.0;
 double pickY = 0.0;
-double dropX = 2.0;
-double dropY = -2.0;
+double dropX = 4.0;
+double dropY = 4.0;
 
 bool itemPickedUp = false;
 bool itemDroppedOff = false;

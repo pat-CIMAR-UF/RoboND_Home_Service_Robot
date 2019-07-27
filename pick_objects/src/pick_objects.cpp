@@ -11,7 +11,6 @@ int main(int argc, char** argv){
 
   /*   
   ros::NodeHandle n;
-
   ros::Publisher goal_pub = n.advertise<geometry_msgs::Pose>("/target", 20);
   */
 
@@ -30,7 +29,7 @@ int main(int argc, char** argv){
   goal.target_pose.header.stamp = ros::Time::now();
 
   // Define a position and orientation for the robot to reach
-  goal.target_pose.pose.position.x = 4.0;
+  goal.target_pose.pose.position.x = 3.0;
   goal.target_pose.pose.orientation.w = 1.0;
 
   // Send the goal position and orientation for the robot to reach
@@ -42,7 +41,7 @@ int main(int argc, char** argv){
 
 
 
-  goal.target_pose.pose.orientation.z = -2.35;
+  goal.target_pose.pose.orientation.z = 1.57;
   ROS_INFO("Sending command to rotate");
   ac.sendGoal(goal);
   ac.waitForResult();
@@ -56,8 +55,8 @@ int main(int argc, char** argv){
   }
 
 
-  goal.target_pose.pose.position.x = 2.0;
-  goal.target_pose.pose.position.y = -2.0;
+  goal.target_pose.pose.position.x = 4.0;
+  goal.target_pose.pose.position.y = 4.0;
   goal.target_pose.pose.orientation.w = 1.0;
 
   ROS_INFO("Sending goal for drop off location");
