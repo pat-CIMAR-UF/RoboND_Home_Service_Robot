@@ -12,10 +12,11 @@ A better mp4 file could be downloaded [here](https://github.com/pat-CIMAR-UF/Rob
 # Install
 
 ```bash
-$ sudo apt-get install ros-kinetic-turtlebot ros-kinetic-turtlebot-apps ros-kinetic-turtlebot-interactions ros-kinetic-turtlebot-simulator ros-kinetic-kobuki-ftdi ros-kinetic-ar-track-alvar-msgs
 $ pip install catkin_pkg
 $ pip install rospkg
 $ sudo apt-get install python-rospkg
+$ sudo apt-get install ros-kinetic-navigation
+$ sudo apt-get install ros-kinetic-turtlebot ros-kinetic-turtlebot-apps ros-kinetic-turtlebot-interactions ros-kinetic-turtlebot-simulator ros-kinetic-kobuki-ftdi ros-kinetic-ar-track-alvar-msgs
 $ cd catkin_ws/src
 $ catkin_init_workspace
 $ git clone --recursive https://github.com/pat-CIMAR-UF/RoboND_Home_Service_Robot.git
