@@ -5,7 +5,7 @@ This is a comprehensive repository of Udacity Robotics Software Engineer Nanodeg
 This repository is tested and successfully built under Ubuntu 16.04 and ROS Kinetic, with Gazebo 7.15 integration. 
 
 # Install
-To build package tool:
+Install package tools:
 ```bash
 $ pip install catkin_pkg
 $ pip install rospkg
