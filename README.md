@@ -15,8 +15,11 @@ $ sudo apt-get install python-rospkg
 For related ros package(**very important**):
 ```bash
 $ sudo apt-get install ros-kinetic-turtlebot ros-kinetic-turtlebot-apps ros-kinetic-turtlebot-interactions ros-kinetic-turtlebot-simulator ros-kinetic-kobuki-ftdi ros-kinetic-ar-track-alvar-msgs
-
 $ sudo apt-get install ros-kinetic-navigation
+```
+Update everything:
+```bash
+$ sudo apt-get update && sudo apt-get upgrade -y
 ```
 
 ## **Now, the core**
