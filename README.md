@@ -24,6 +24,7 @@ $ sudo apt-get update && sudo apt-get upgrade -y
 
 ## **Now, the core**
 ```bash
+$ mkdir -p catkin/src
 $ cd catkin_ws/src
 $ catkin_init_workspace
 $ git clone --recursive https://github.com/pat-CIMAR-UF/RoboND_Home_Service_Robot.git
