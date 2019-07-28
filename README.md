@@ -4,19 +4,23 @@ This is a comprehensive repository of Udacity Robotics Software Engineer Nanodeg
 
 This repository is tested and successfully built under Ubuntu 16.04 and ROS Kinetic, with Gazebo 7.15 integration. 
 
-<p align="center">
-    <img src="image/demo2.gif" width="800px" alt=""/>
-</p>
-
-A better mp4 file could be downloaded [here](https://github.com/pat-CIMAR-UF/RoboND_Home_Service_Robot/blob/master/image/demo.mp4). It's smaller than this gif and clearer.
 # Install
-
+To build package tool:
 ```bash
 $ pip install catkin_pkg
 $ pip install rospkg
 $ sudo apt-get install python-rospkg
-$ sudo apt-get install ros-kinetic-navigation
+```
+
+For related ros package(**very important**):
+```bash
 $ sudo apt-get install ros-kinetic-turtlebot ros-kinetic-turtlebot-apps ros-kinetic-turtlebot-interactions ros-kinetic-turtlebot-simulator ros-kinetic-kobuki-ftdi ros-kinetic-ar-track-alvar-msgs
+
+$ sudo apt-get install ros-kinetic-navigation
+```
+
+## **Now, the core**
+```bash
 $ cd catkin_ws/src
 $ catkin_init_workspace
 $ git clone --recursive https://github.com/pat-CIMAR-UF/RoboND_Home_Service_Robot.git
@@ -58,16 +62,15 @@ $ cd catkin_ws/src/RoboND_Home_Service_Robot/scripts
 $ chmod +x home_service.sh
 $ ./home_service.sh
 ```
-**The first run of this shell code may not success, because the turtlebot_interaction package was recursively cloned from its own github, and it doesn't contain a marker topic in its rviz launch file.**
 
-**It is simple to solve:**
-
-+ **Add a marker topic in rviz, leave the default "visualization_marker" topic as it is**
-+ **Save Config**
-+ **Close everything: rviz, gazebo, all the nodes initiated by the shell script**
-+ **relaunch the shell script `./home_service.sh`**
 
 # Result
+
+<p align="center">
+    <img src="image/demo2.gif" width="800px" alt=""/>
+</p>
+
+A better mp4 file could be downloaded [here](https://github.com/pat-CIMAR-UF/RoboND_Home_Service_Robot/blob/master/image/demo.mp4). It's smaller than this gif and clearer.
 
 Comments about the gif above. 
 
